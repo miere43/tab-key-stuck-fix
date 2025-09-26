@@ -1,0 +1,1 @@
+constexpr const char* TabKeyStuckFix_VERSION = "@TabKeyStuckFix_VERSION@";
