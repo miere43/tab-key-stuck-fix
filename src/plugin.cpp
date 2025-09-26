@@ -174,9 +174,6 @@ static void d3dInitThunk() {
         return;
     }
 
-    const auto device = (ID3D11Device*)renderer->GetRuntimeData().forwarder;
-    const auto context = (ID3D11DeviceContext*)renderer->GetRuntimeData().context;
-
     windowProcOriginal = (WNDPROC)SetWindowLongPtrA(desc.OutputWindow, GWLP_WNDPROC, (LONG_PTR)windowProcThunk);
     if (!windowProcOriginal) {
         SPDLOG_ERROR("SetWindowLongPtrA({}) failed, error: {}", (void*)desc.OutputWindow, GetLastError());
